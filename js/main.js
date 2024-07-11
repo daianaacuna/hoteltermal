@@ -3,17 +3,25 @@ alert("Bienvenido al Hotel termal, a continuacion podras visualizar los codigos 
 
 function cotizacion () {
     const numeroA = parseInt(prompt("Confirme codigo de habitacion elegida"));
+    if(numeroA !=calculo) {
+        alert("Los codigos no coinciden");
+        return;
+    } else{
+        alert("ya casi estamos! por favor continua con el proximo paso");
+    }    
 
     if(numeroA === 200000 || numeroA === 220000 || numeroA ===260000 || numeroA ===300000) {
         
     const numeroB = parseInt(prompt("Ingrese numero de noches de su estadia"));
-    
+
         alert("cotizacion de su estadia $" + (numeroA * numeroB));
     } else{
-        alert("confirmacion de codigo invalido");
+        alert("Los codigos no coinciden");
     }
 
 }
+
+
 
 let calculo;
 do {
